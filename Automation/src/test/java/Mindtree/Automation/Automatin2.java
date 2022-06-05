@@ -12,14 +12,17 @@ public static void main(String[] args) {
 	System.setProperty("webdriver.chrome.driver","C:\\Users\\mindsdet115\\Downloads\\chromedriver_win32\\chromedriver.exe");
 	WebDriver driver=new ChromeDriver();
 	driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-	
+	//driver.manage().timeouts().ex
 	
 	//navigate to urbanladder platform
 	driver.get("https://www.urbanladder.com/");
 	
 	
-	//logging in to Urbanladder with valid credentials
+	
 	driver.findElement(By.xpath("//span[@class='header-icon-link user-profile-icon']")).click();
+	
+	//logging in to Urbanladder with valid credentials
+	//driver.findElement(By.xpath("//span[@class='header-icon-link user-profile-icon']")).click();
 	driver.findElement(By.xpath("//a[@class='login-link authentication_popup']")).click();
 	driver.findElement(By.xpath("//input[@class='email required input_authentication']")).sendKeys("M1083081@mindtree.com");
 	driver.findElement(By.xpath("//input[@class='required input_authentication']")).sendKeys("Furniture@1122");
@@ -30,5 +33,8 @@ public static void main(String[] args) {
 	
 	//navigation on track orders
 	driver.findElement(By.xpath("//a[@class='header-icon-link']")).click();
+  // driver.findElement(By.cssSelector("h4class=\"_2Ocei\" tabindex=\"0\""))
+
 }
+
 }
